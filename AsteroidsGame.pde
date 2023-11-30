@@ -9,7 +9,9 @@ public void setup() {
     stars[i] = new Star();
     stars[i].show();
   }
-
+  for(int i = 0; i < 21; i++){
+    rocks.add(new Asteroids());
+  }
 }
 public void draw() {
   background(0);
@@ -22,6 +24,10 @@ public void draw() {
   for(int i = 0; i < shots.size(); i++){
     shots.get(i).move();
     shots.get(i).show();
+  }
+  for(int i = 0; i < rocks.size(); i++){
+    rocks.get(i).move();
+    rocks.get(i).show();
   }
 
   if(w == true)
