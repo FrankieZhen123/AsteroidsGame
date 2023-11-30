@@ -2,7 +2,7 @@ class Bullet extends Floater{
   Bullet(){
     myCenterX = ship.getX();
     myCenterY = ship.getY();
-    myPointDirection = ship.getDirection();
+    myPointDirection = ship.getDirection() + (int)(Math.random()*3)-1;
     accelerate(5);
   }
   public void move(){
