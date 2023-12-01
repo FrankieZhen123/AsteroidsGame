@@ -15,6 +15,5 @@ class Star {
     if(random > 5)
       c = 255;
     else c = 0;
-      
   }
 }
