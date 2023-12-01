@@ -14,5 +14,4 @@ class Asteroids extends Floater{
   }
   public double getX(){return myCenterX;}
   public double getY(){return myCenterY;}
-  public double getDirection(){return myPointDirection;}
 }
