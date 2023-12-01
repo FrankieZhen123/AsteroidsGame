@@ -9,14 +9,12 @@ public void setup() {
     stars[i] = new Star();
     stars[i].show();
   }
-  for(int i = 0; i < 21; i++){
+  for(int i = 0; i < 15; i++){
     rocks.add(new Asteroids());
   }
 }
 public void draw() {
   background(0);
-  ship.show();
-  ship.move();
   for(int i = 0 ; i < stars.length; i++){
     stars[i].twinkle();
     stars[i].show();
@@ -29,14 +27,18 @@ public void draw() {
     rocks.get(i).move();
     rocks.get(i).turn((int)(Math.random()*8));
     rocks.get(i).show();
+    float d = dist((float)ship.getX(), (float)ship.getY(), (float)rocks.get(i).getX(), (float)rocks.get(i).getY());
+    if(d < 10)
+      rocks.remove(i);
   }
-
+  ship.show();
+  ship.move();
   if(w == true)
-    ship.accelerate(0.25);
+    ship.accelerate(0.15);
   if(a == true)
     ship.turn(-5);
   if(s == true)
-    ship.accelerate(-0.25);
+    ship.accelerate(-0.15);
   if(d == true)
     ship.turn(5);
     
