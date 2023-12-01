@@ -50,7 +50,6 @@ public void draw() {
     ship.turn(5);
     
 }
-
 public void keyPressed(){
   if(key == 'w')
     w = true;
@@ -65,7 +64,6 @@ public void keyPressed(){
   if(key == ' ')
     shots.add(new Bullet());
 }
-
 public void keyReleased(){
   if(key == 'w')
     w = false;
