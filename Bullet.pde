@@ -22,10 +22,6 @@ class Bullet extends Floater{
     noStroke();
     ellipse((float)myCenterX, (float)myCenterY, 7, 7);
   }
-  public double getX(){
-    return myCenterX;
-  }
-  public double getY(){
-    return myCenterY;
-  }
+  public double getX(){return myCenterX;}
+  public double getY(){return myCenterY;}
 }
