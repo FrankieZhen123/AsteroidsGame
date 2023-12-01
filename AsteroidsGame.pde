@@ -1,7 +1,7 @@
 Star [] stars = new Star[400];
 Spaceship ship = new Spaceship();
-ArrayList <Asteroids> rocks = new ArrayList();
-ArrayList <Bullet> shots = new ArrayList();
+ArrayList <Asteroids> rocks = new ArrayList <Asteroids> ();
+ArrayList <Bullet> shots = new ArrayList <Bullet> ();
 boolean w, a, s, d;
 public void setup() {
   size(1000,1000);
@@ -48,6 +48,7 @@ public void draw() {
     ship.accelerate(-0.15);
   if(d == true)
     ship.turn(5);
+    
 }
 public void keyPressed(){
   if(key == 'w')
