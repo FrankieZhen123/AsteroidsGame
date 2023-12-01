@@ -23,6 +23,13 @@ public void draw() {
     shots.get(i).move();
     shots.get(i).show();
   }
+  for(int i = 0; i < shots.size(); i++){
+    for(int e = 0; e < rocks.size(); e++){
+      float f = dist((float)shots.get(i).getX(), (float)shots.get(i).getY(), (float)rocks.get(e).getX(), (float)rocks.get(e).getY());
+      if(f < 20)
+      rocks.remove(e);
+    }
+  }
   for(int i = 0; i < rocks.size(); i++){
     rocks.get(i).move();
     rocks.get(i).turn((int)(Math.random()*8));
