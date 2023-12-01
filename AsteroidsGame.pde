@@ -48,7 +48,6 @@ public void draw() {
     ship.accelerate(-0.15);
   if(d == true)
     ship.turn(5);
-    
 }
 public void keyPressed(){
   if(key == 'w')
