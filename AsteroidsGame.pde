@@ -11,6 +11,7 @@ public void setup() {
   }
   for(int i = 0; i < 15; i++){
     rocks.add(new Asteroids());
+    rocks.get(i).setRot((int)(Math.random()*5));
   }
 }
 public void draw() {
