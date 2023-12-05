@@ -2,7 +2,7 @@ Star [] stars = new Star[400];
 Spaceship ship = new Spaceship();
 ArrayList <Asteroids> rocks = new ArrayList <Asteroids> ();
 ArrayList <Bullet> shots = new ArrayList <Bullet> ();
-boolean w, a, s, d;
+boolean w, a, s, g;
 public void setup() {
   size(1000,1000);
   for(int i = 0; i < stars.length; i++){
@@ -47,7 +47,7 @@ public void draw() {
     ship.turn(-5);
   if(s == true)
     ship.accelerate(-0.15);
-  if(d == true)
+  if(g == true)
     ship.turn(5);
 }
 public void keyPressed(){
@@ -57,8 +57,8 @@ public void keyPressed(){
     a = true;
   if(key == 's')
     s = true;
-  if(key == 'd')
-    d = true;
+  if(key == 'g')
+    g = true;
   if(key == 'q')
     ship.hyperSpace(); 
   if(key == ' ')
@@ -71,6 +71,6 @@ public void keyReleased(){
     a = false;
   if(key == 's')
     s = false;
-  if(key == 'd')
-    d = false;
+  if(key == 'g')
+    g = false;
 }
