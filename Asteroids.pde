@@ -4,8 +4,8 @@ class Asteroids extends Floater{
     rotSpeed = 5;
     myColor = 200;
     corners = 6;
-    xCorners = new int []{-11, 7, 13, 6, -11, -5};
-    yCorners = new int []{-8, -8, 0, 10, 8, 0};
+    xCorners = new int []{-11, 4, 7, 6, -11, -17};
+    yCorners = new int []{-10, -8, -2, 5, 8, 3};
     myCenterX = (int)(Math.random()*1000);
     myCenterY = (int)(Math.random()*1000);
     myXspeed = (int)(Math.random()*2);
