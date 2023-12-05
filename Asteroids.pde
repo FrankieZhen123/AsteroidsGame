@@ -1,8 +1,8 @@
 class Asteroids extends Floater{
   int rotSpeed;
   Asteroids(){
-    rotSpeed = (int)(Math.random()*6;
-    myColor = 155;
+    rotSpeed = 5;
+    myColor = 200;
     corners = 6;
     xCorners = new int []{-11, 7, 13, 6, -11, -5};
     yCorners = new int []{-8, -8, 0, 10, 8, 0};
@@ -14,4 +14,5 @@ class Asteroids extends Floater{
   }
   public double getX(){return myCenterX;}
   public double getY(){return myCenterY;}
+  public void setRot(int n){rotSpeed = n;}
 }
