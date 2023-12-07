@@ -2,7 +2,7 @@ Star [] stars = new Star[400];
 Spaceship ship = new Spaceship();
 ArrayList <Asteroids> rocks = new ArrayList();
 ArrayList <Bullet> shots = new ArrayList();
-boolean w, a, s, g;
+boolean w, a, s, d;
 public void setup() {
   size(1000,1000);
   for(int i = 0; i < stars.length; i++){
@@ -26,8 +26,8 @@ public void draw() {
   }
   for(int i = 0; i < shots.size(); i++){
     for(int e = 0; e < rocks.size(); e++){
-      float f = dist((float)shots.get(i).getX(), (float)shots.get(i).getY(), (float)rocks.get(e).getX(), (float)rocks.get(e).getY());
-      if(f < 20)
+      float p = dist((float)shots.get(i).getX(), (float)shots.get(i).getY(), (float)rocks.get(e).getX(), (float)rocks.get(e).getY());
+      if(p < 20)
       rocks.remove(e);
     }
   }
@@ -35,8 +35,8 @@ public void draw() {
     rocks.get(i).move();
     rocks.get(i).turn((int)(Math.random()*8));
     rocks.get(i).show();
-    float d = dist((float)ship.getX(), (float)ship.getY(), (float)rocks.get(i).getX(), (float)rocks.get(i).getY());
-    if(d < 10)
+    float o = dist((float)ship.getX(), (float)ship.getY(), (float)rocks.get(i).getX(), (float)rocks.get(i).getY());
+    if(o < 10)
       rocks.remove(i);
   }
   ship.show();
@@ -47,7 +47,7 @@ public void draw() {
     ship.turn(-4);
   if(s == true)
     ship.accelerate(-0.1);
-  if(g == true)
+  if(d == true)
     ship.turn(4);
 }
 public void keyPressed(){
@@ -58,7 +58,7 @@ public void keyPressed(){
   if(key == 's')
     s = true;
   if(key == 'd')
-    g = true;
+    d = true;
   if(key == 'q')
     ship.hyperSpace(); 
   if(key == ' ')
@@ -72,5 +72,5 @@ public void keyReleased(){
   if(key == 's')
     s = false;
   if(key == 'd')
-    g = false;
+    d = false;
 }
