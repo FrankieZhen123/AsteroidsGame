@@ -1,7 +1,7 @@
 Star [] stars = new Star[400];
 Spaceship ship = new Spaceship();
-ArrayList <Asteroids> rocks = new ArrayList <Asteroids> ();
-ArrayList <Bullet> shots = new ArrayList <Bullet> ();
+ArrayList <Asteroids> rocks = new ArrayList();
+ArrayList <Bullet> shots = new ArrayList();
 boolean w, a, s, d;
 public void setup() {
   size(1000,1000);
@@ -11,7 +11,7 @@ public void setup() {
   }
   for(int i = 0; i < 15; i++){
     rocks.add(new Asteroids());
-    rocks.get(i).setRot((int)(Math.random()*5));
+    rocks.get(i).setRot((int)(Math.random()*27));
   }
 }
 public void draw() {
@@ -51,13 +51,13 @@ public void draw() {
     ship.turn(5);
 }
 public void keyPressed(){
-  if(key == 'w')
+  if(keyCode == UP)
     w = true;
-  if(key == 'a')
+  if(keyCode == LEFT)
     a = true;
-  if(key == 's')
+  if(keyCode == DOWN)
     s = true;
-  if(key == 'd')
+  if(keyCode == RIGHT)
     d = true;
   if(key == 'q')
     ship.hyperSpace(); 
@@ -65,12 +65,12 @@ public void keyPressed(){
     shots.add(new Bullet());
 }
 public void keyReleased(){
-  if(key == 'w')
+  if(keyCode == UP)
     w = false;
-  if(key == 'a')
+  if(keyCode == LEFT)
     a = false;
-  if(key == 's')
+  if(keyCode == DOWN)
     s = false;
-  if(key == 'd')
+  if(keyCode == RIGHT)
     d = false;
 }
