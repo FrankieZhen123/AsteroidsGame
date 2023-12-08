@@ -5,14 +5,14 @@ class Star {
     y = (int)(Math.random()*1000);
     c = 255;
   }
-  public void show(){
+  public void show(int n){
     noStroke();
     fill(c);
-    ellipse(x, y, 3, 3); 
+    ellipse(x, y, n, n); 
   }
   public void twinkle(){
     int random = (int)(Math.random()*10+1);
-    if(random > 5)
+    if(random > 3)
       c = 255;
     else c = 0;
   }
