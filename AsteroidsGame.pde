@@ -7,7 +7,7 @@ public void setup() {
   size(1000,1000);
   for(int i = 0; i < stars.length; i++){
     stars[i] = new Star();
-    stars[i].show();
+    stars[i].show((int)(Math.random()*4+2));
   }
   for(int i = 0; i < 15; i++){
     rocks.add(new Asteroids());
@@ -18,7 +18,7 @@ public void draw() {
   background(0);
   for(int i = 0 ; i < stars.length; i++){
     stars[i].twinkle();
-    stars[i].show();
+    stars[i].show((int)(Math.random()*4+2));
   }
   for(int i = 0; i < shots.size(); i++){
     shots.get(i).move();
@@ -42,13 +42,13 @@ public void draw() {
   ship.show();
   ship.move();
   if(w == true)
-    ship.accelerate(0.1);
+    ship.accelerate(0.07);
   if(a == true)
-    ship.turn(-4);
+    ship.turn(-3);
   if(s == true)
-    ship.accelerate(-0.1);
+    ship.accelerate(-0.07);
   if(d == true)
-    ship.turn(4);
+    ship.turn(3);
 }
 public void keyPressed(){
   if(key == 'w')
