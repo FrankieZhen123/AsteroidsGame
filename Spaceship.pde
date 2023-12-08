@@ -1,9 +1,9 @@
 class Spaceship extends Floater {
   Spaceship() {
     myColor = 255;
-    corners = 4;
-    xCorners = new int []{-8, 16, -8, -2};
-    yCorners = new int []{-8, 0, 8, 0};
+    corners = 12;
+    xCorners = new int []{-14, -14, -5, -5, 11, 16, 11, -5, -5, -14, -14, -7};
+    yCorners = new int []{-8, -15, -13, -7, -6, 0, 6, 7, 13, 15, 8, 0};
     myCenterX = myCenterY = 500;
     myXspeed = myYspeed = 0;
     myPointDirection = 0;
